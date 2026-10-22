@@ -1,3 +1,13 @@
-numpy==1.26.4
-pyyaml==6.0.2
-pytest==8.3.3
+# Versions used to produce the results (Google Colab, Python 3.13). CPU-only PyTorch keeps installs small.
+--extra-index-url https://download.pytorch.org/whl/cpu
+numpy==2.1.3
+scipy==1.16.3
+pandas==2.2.3
+scikit-learn==1.6.1
+matplotlib==3.10.0
+wfdb==4.3.1
+torch==2.11.0
+gradio==6.30.0
+plotly==5.24.1
+pyyaml==6.0.3
+pytest==8.4.2

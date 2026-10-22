@@ -1,1 +1,19 @@
-seed: 42
+# All paths are relative to the repository root.
+data_dir: data/mitdb            # MIT-BIH records (scripts/download_data.sh)
+dataset: data/beats_mitdb.npz   # written by scripts/build_dataset.py
+rpeaks: data/rpeaks_ds2.npz     # cached R-peak detections on DS2 (written by scripts/evaluate.py)
+model: models/beatnet.pt        # trained 5-seed ensemble
+results: results
+
+# Training (DS1 only)
+seeds: [0, 1, 2, 3, 4]
+epochs: 15
+batch_size: 256
+learning_rate: 0.001
+select_on: [N, S, V]            # the epoch with the best mean F1 of these classes on the validation patients is kept
+validation_fraction: 0.2        # share of DS1 patients held out for epoch selection
+validation_seed: 0
+
+# Evaluation
+match_tolerance_s: 0.15         # a detected beat matches a cardiologist's beat within +-150 ms
+example_record: "233"           # DS2 record drawn in results/example_strip.png

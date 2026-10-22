@@ -5,3 +5,6 @@ data/
 *.ckpt
 *.pt
 .env
+!models/beatnet.pt
+.gradio/
+flagged/

@@ -1,0 +1,9 @@
+model,class,n_test,Se %,PPV %,F1 %
+LDA,N,44218.0,97.6,95.6,96.6
+LDA,S,1836.0,22.5,35.4,27.5
+LDA,V,3219.0,77.3,92.2,84.1
+LDA,F,388.0,3.9,2.4,2.9
+Gradient boosting,N,44218.0,80.0,96.6,87.5
+Gradient boosting,S,1836.0,38.1,20.2,26.4
+Gradient boosting,V,3219.0,96.7,39.3,55.9
+Gradient boosting,F,388.0,0.3,0.1,0.1

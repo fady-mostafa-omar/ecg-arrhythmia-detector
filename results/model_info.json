@@ -1,0 +1,28 @@
+{
+  "members": 5,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "parameters": 91545,
+  "parameters_per_member": 18309,
+  "us_per_beat_cpu": 1345.0,
+  "selection_rule": "N,S,V",
+  "normal_beats": 44195,
+  "normal_mislabeled": 2043,
+  "normal_mislabeled_pct": 4.6,
+  "normal_mislabeled_to": {
+    "S": 938,
+    "V": 458,
+    "F": 641,
+    "Q": 6
+  },
+  "detector": {
+    "expert_beats": 49712,
+    "missed": 167,
+    "extra": 58
+  }
+}
