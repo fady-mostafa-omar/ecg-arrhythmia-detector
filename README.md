@@ -4,10 +4,26 @@ Finds every heartbeat in a single-lead ECG and sorts it into the five AAMI class
 ventricular ectopic, fusion, unclassifiable). Tested on 22 patients the model never saw.
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fady-mostafa-omar/ecg-arrhythmia-detector/blob/main/notebooks/ecg_arrhythmia_detector.ipynb)
-[![Hugging Face Space](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-live%20app-yellow)](https://huggingface.co/spaces/fady-mostafa-omar/ecg-arrhythmia-detector)
 [![CI](https://github.com/fady-mostafa-omar/ecg-arrhythmia-detector/actions/workflows/ci.yml/badge.svg)](https://github.com/fady-mostafa-omar/ecg-arrhythmia-detector/actions/workflows/ci.yml)
 
 <img src="results/example_strip.png" alt="Model output on an unseen patient">
+
+## The app
+
+Pick one of the 22 test patients or upload your own single-lead ECG (CSV, any sampling rate of at least 100 Hz).
+
+| Basic: for anyone | Advanced: for clinicians and researchers |
+|---|---|
+| <img src="docs/screenshots/basic.png" alt="Basic tab"> | <img src="docs/screenshots/advanced.png" alt="Advanced tab"> |
+
+- **Basic:** recording length, heartbeats, average heart rate, normal and abnormal beats, and the ECG on standard paper.
+- **Advanced:** every beat colored by class (hollow = low confidence; hover for all class probabilities), heart rate
+  and rhythm, beat-to-beat intervals, beat counts, agreement with the cardiologists, heart-rate variability, and a
+  beat-by-beat CSV export.
+- **How it works:** method, test results and limitations.
+
+**Try it:** open the [Colab notebook](https://colab.research.google.com/github/fady-mostafa-omar/ecg-arrhythmia-detector/blob/main/notebooks/ecg_arrhythmia_detector.ipynb) and run sections 0 and 1. It prints a temporary public link
+to the app, which stays active while that cell runs.
 
 ## Problem
 
@@ -129,7 +145,7 @@ those numbers are not comparable with the inter-patient results above.
 
 ## How to run
 
-**Google Colab:** open the notebook with the badge above and run the cells.
+**Google Colab:** open the notebook with the badge above. Section 0 installs everything and downloads the data, section 1 starts the app, and section 2 reproduces every result.
 
 **Local:**
 
