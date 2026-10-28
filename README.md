@@ -23,7 +23,8 @@ Pick one of the 22 test patients or upload your own single-lead ECG (CSV, any sa
 - **How it works:** method, test results and limitations.
 
 **Try it:** open the [Colab notebook](https://colab.research.google.com/github/fady-mostafa-omar/ecg-arrhythmia-detector/blob/main/notebooks/ecg_arrhythmia_detector.ipynb) and run sections 0 and 1. It prints a temporary public link
-to the app, which stays active while that cell runs.
+to the app, which stays active while that cell runs. If the link cannot be created (Gradio's link service is sometimes down),
+run the notebook's next cell instead: it opens the app through Colab.
 
 ## Problem
 
@@ -139,6 +140,9 @@ those numbers are not comparable with the inter-patient results above.
 - F beats are not recognized (0.0% sensitivity); they are only 0.8% of the training beats.
 - About 5 in 100 normal beats are labeled abnormal, so the app overestimates the
   abnormal share in mostly normal recordings.
+- Errors are uneven across patients. In record 233, the default example in the app, the cardiologists label
+  72% of the beats normal but the app shows 59%: 462 normal beats are labeled abnormal,
+  455 of them as F.
 - The epoch is chosen on only 5 validation patients, so single runs vary (see the SD values); the ensemble reduces
   but does not remove this.
 - Research and education tool, not a medical device.
